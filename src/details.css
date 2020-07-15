@@ -1,0 +1,59 @@
+.details{
+    display: grid;
+    margin-top: 14vh;
+    max-width: 1600px;   
+    grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: minmax(300px, auto);
+    box-sizing: border-box;
+    grid-gap: .25em;
+
+}
+.details h1{
+    color: cornsilk;
+}
+.info{
+    background-color: grey;
+    
+    border-radius: 10px;
+    overflow: hidden;
+}
+.info .nepal{
+    width:50px;
+
+}
+.info .flag {
+    width: 200px;
+}
+
+.info:nth-child(1){
+  
+    grid-column: span 3;
+    grid-row: span 2;
+  
+}
+.info:nth-child(2){
+    grid-column: span 2;
+}
+.info:nth-child(3){
+   grid-row: span 2;
+}
+
+
+@media(max-width: 700px){
+    .details .flag{
+        width: 100px;
+    }
+    .details{
+        min-width: 99%;
+        margin-left: .5%;
+        justify-content: center;
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+		grid-template-rows: minmax(auto, auto);	
+    }
+    .details .info
+	{
+        min-height: unset;
+		grid-column: unset !important;
+		grid-row: unset !important;
+	}
+}
