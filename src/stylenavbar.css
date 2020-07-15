@@ -31,6 +31,13 @@ nav {
 	letter-spacing: 5px;
 	font-size: var(--logotextsize);
 }
+#homelink{
+	text-decoration: none;
+	color: grey;
+	padding: 5px;
+	border: .2rem solid grey;
+	border-radius: 2px;
+}
 .links{
 	margin: 0;;
 	display: flex; 

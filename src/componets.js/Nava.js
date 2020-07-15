@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-
+import {Link } from 'react-router-dom';
 import '../stylenavbar.css'
 class Nava extends Component{
     
@@ -13,13 +13,15 @@ class Nava extends Component{
     <div className="logo">
         <h2>Fabi Countires</h2>
     </div>
-    
+    <div className="homebutton">
+        <Link to="/" id="homelink">Home</Link>
+    </div>
     <ul className= {this.state.active ? "links" : "links nav-active" }>
     
-        <li><a href="#">Home</a></li>
-        <li><a href="connectwithus.html">Connect</a></li>
-        <li><a href="gala.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="https://github.com/joseDelator/restcount/tree/master/src">git_hub</a></li>
+        
+        <li><a href="https://github.com/joseDelator?tab=repositories">Projects</a></li>
+        <li><a href="https://www.linkedin.com/in/jose-de-la-torre-b58126161">About</a></li>
         
     </ul>
     <div className="burger" onClick = {() => this.setState({active: !this.state.active})}>
