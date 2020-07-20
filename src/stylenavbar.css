@@ -68,7 +68,7 @@ nav {
 .burger div{
 	width: 25px;
 	height: 3px;
-	background-color:green;
+	background-color:grey;
 	margin: 5px; 
 	border-radius: 5px;
 	transition: all .3s ease; 

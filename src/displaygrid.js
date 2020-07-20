@@ -3,7 +3,7 @@ import './display.css'
 import Stats from './componets.js/states'
 import Search from './componets.js/search'
 import Svgfile from './componets.js/svhfile'
-
+import Up_UP from './componets.js/UP_UP'
 class Display extends Component{
     
     render() { return(
@@ -12,12 +12,8 @@ class Display extends Component{
             <div id="containerbig">
                 <Stats />
             </div>
-            
-        <a href='#containerbig' id="up_up">
-            <Svgfile />
-        </a>
+            <Up_UP />
         </div>
-      
         )
     }
 }

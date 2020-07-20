@@ -9,7 +9,7 @@ const Stat = (props) => {
             <img src = {player.flag}></img>
             <h2>{player.name}</h2>
             <h3>{player.region}</h3>
-            <Link className='link'to={'/details/country/'+ player.name}><SVGinfo /></Link>
+            <Link className='link'to={'/details/country/'+ player.name}><SVGinfo /> </Link>
         </div>
        
     )

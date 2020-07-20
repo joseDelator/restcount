@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component, } from 'react';
 import {ProductConsumer} from  './context.js'; 
 import Stat from './Stat'
 class Stats extends Component{
+ 
+  
  render(){
      return(
          <ProductConsumer>

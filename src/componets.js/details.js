@@ -73,13 +73,13 @@ class Details extends Component {
                         <h2>Currencies</h2>
                        {curn.map(
                            item =>(
-                            <ul>{item.name}</ul>
+                            <ul>Name: {item.name}</ul>
                            
                            )
                        )}
                        {curn.map(
                            item =>(
-                            <ul>{item.symbol}</ul>
+                            <ul>Symbol: {item.symbol}</ul>
                            
                            )
                        )}
