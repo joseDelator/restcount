@@ -1,7 +1,7 @@
 import React, {Component, } from 'react';
 import Svgfile from './svhfile'
 
-class Up_UP extends Component{
+class Up extends Component{
  state={
      scrolled: false, 
     
@@ -27,4 +27,4 @@ componentDidMount(){
      )   
  }
 }
-export default Up_UP
+export default Up

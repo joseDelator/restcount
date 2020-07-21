@@ -1,7 +1,7 @@
 import React, { Component} from 'react'
 import '../details.css'
 import axios from 'axios'
-import { withRouter } from 'react-router';
+
 class Details extends Component {
     state = {
         player:[],
@@ -39,7 +39,7 @@ class Details extends Component {
                     <div className="info" >
                         <h1>{player.name}</h1>
                         <h4>{player.nativeName}</h4>
-                        <img  className={player.name !== 'Nepal' ? "flag" : "nepal" } src={player.flag}></img>
+                        <img  className={player.name !== 'Nepal' ? "flag" : "nepal" } alt="Country Flag" src={player.flag}></img>
                     </div>
                     <div className="info">
                         <h2>Size</h2>

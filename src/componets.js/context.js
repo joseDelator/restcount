@@ -1,4 +1,4 @@
-import React, {Component, useReducer} from 'react';
+import React, {Component} from 'react';
 import axios from 'axios'
 const context = React.createContext();
 
