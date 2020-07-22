@@ -43,43 +43,43 @@ class Details extends Component {
                     </div>
                     <div className="info">
                         <h2>Size</h2>
-                            <ul>{player.population} People</ul>
-                            <ul>{player.area} Acres</ul>
+                            <h4>{player.population} People</h4>
+                            <h4>{player.area} Acres</h4>
                             
                     </div>
                     <div className="info">
                     <h2>Languages</h2>
                             {lang.map(item =>(
-                            <ul>{item.name}</ul>
+                            <h4 key={item.name}>{item.name}</h4>
                         ))}
                         <h3>translations</h3>
-                            <ul>Spainish: {tran.es}</ul>
-                            <ul>French: {tran.fr}</ul>
-                            <ul>Italian: {tran.it}</ul>
-                            <ul>Japanies: {tran.ja}</ul>
+                            <h4>Spainish: {tran.es}</h4>
+                            <h4>French: {tran.fr}</h4>
+                            <h4>Italian: {tran.it}</h4>
+                            <h4>Japanies: {tran.ja}</h4>
                             
                         </div>
                     <div className="info">
                     <h2>Region</h2>
-                        <ul>{ player.region}</ul>
-                        <ul>{player.subregion}</ul>
-                        <ul>{player.timezones}</ul>
-                            <ul>CallingCode: {player.callingCodes}</ul>
+                        <h4>{ player.region}</h4>
+                        <h4>{player.subregion}</h4>
+                        <h4>{player.timezones}</h4>
+                            <h4>CallingCode: {player.callingCodes}</h4>
                         {bloc.map(item =>(
-                            <ui>{item.name}</ui>
+                            <h4 key = {item.name}>{item.name}</h4>
                         ))}
                     </div>
                     <div className="info">
                         <h2>Currencies</h2>
                        {curn.map(
                            item =>(
-                            <ul>Name: {item.name}</ul>
+                            <h4 key={item.name}>Name: {item.name}</h4>
                            
                            )
                        )}
                        {curn.map(
                            item =>(
-                            <ul>Symbol: {item.symbol}</ul>
+                            <h4 key= {item.symbol}>Symbol: {item.symbol}</h4>
                            
                            )
                        )}
