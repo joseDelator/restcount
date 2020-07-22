@@ -6,7 +6,7 @@ class Up extends Component{
      scrolled: false, 
     
  }
- /*
+ 
 componentDidMount(){
     window.addEventListener('scroll', () =>{
       const isTop = window.scrollY < 200; 
@@ -22,7 +22,7 @@ componentDidMount(){
 componentWillUnmount(){
     window.removeEventListener('scroll', () =>{});
 }
-*/
+
  render(){ 
      return(
     <a href='#containerbig' className={ this.state.scrolled ? "up_up":"top"}>
