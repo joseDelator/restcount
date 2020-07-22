@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Nava from'./componets.js/Nava.js';
 import Display from './displaygrid';
-import './app.css';
+import './App.css';
 import { Provider } from './componets.js/context.js';
 import Details from './componets.js/details';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
