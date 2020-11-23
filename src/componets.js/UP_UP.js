@@ -9,7 +9,7 @@ class Up extends Component{
  
 componentDidMount(){
     window.addEventListener('scroll', () =>{
-      const isTop = window.scrollY < 200; 
+      const isTop = window.scrollY < 450; 
       if(isTop !== true) {
         this.setState({scrolled: true}) 
       }else{
@@ -25,7 +25,7 @@ componentWillUnmount(){
 
  render(){ 
      return(
-    <a href='#containerbig' className={ this.state.scrolled ? "up_up":"top"}>
+    <a href="#" className={ this.state.scrolled ? "up_up":"top"}>
             <Svgfile />
         </a>
      )   

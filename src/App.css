@@ -7,6 +7,31 @@
     box-sizing: border-box;
     text-align: center;
     font-family: 'Playfair Display', Tahoma, Geneva, Verdana;
-    
+	background-image: url(night.jpg) ;
+	
+	color: white;
+}
+.up_up{
+	opacity: 1;
+	
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 20px;
+	display: flex;
+	background-color: white;
+	border-radius: 50%;
+	transition:  1s ease-in;
+	padding: 2px;
+}
 
+.up_up:hover{
+	opacity: .7;
+	transition: .1s;
+}
+.up_up svg{
+	width: 30px;
+	height: 30px;
+	fill: gray;
+	transform: rotate(180deg);
 }
