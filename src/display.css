@@ -113,17 +113,18 @@
 }
 .search-area{
 	color: wheat;
-	margin-top: 12vh; 
+	 
 	padding-bottom: 12px;
 	
 }
 input{
 	padding-top: 5px;
-	
+
 	background-color: transparent;
 	border: transparent;
 	border-bottom: 3px solid wheat;
-	color: white;
+	color: wheat;
+
 }
 input:focus{
 	border: 3px solid wheat;
@@ -131,4 +132,11 @@ input:focus{
 }
 ::placeholder{
 	color: wheat;
+}
+@media(max-width:800px){
+	input{
+		width: 95%;
+		height: 30px;
+		font-size: 100%;
+	}
 }
