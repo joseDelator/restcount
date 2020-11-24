@@ -9,6 +9,7 @@ class Search extends Component{
         this.setState( { [e.target.name]: e.target.value});
     };
     findcountry = (dispatch, e) =>{
+
         this.setState( { [e.target.name]: e.target.value});
         e.preventDefault(); 
          
@@ -57,7 +58,7 @@ class Search extends Component{
                                 placeholder ="countires"
                                 name ="countryname"
                                 value = {this.state.countryname} 
-                                onChange = {this.findcountry(this,dispatch)}
+                                onChange = {this.findcountry.bind(this, dispatch)}
                                 />
                                 
                            </form>
