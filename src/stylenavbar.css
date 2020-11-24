@@ -1,8 +1,8 @@
 :root{
-	--navcolor: black; 	
+	--navcolor: #121119; 	
 	--navtextcolor: white;
-	--navtextcolorhover:grey;
-	--navtextcolorBGhover:#313639;
+	--navtextcolorhover:white;
+	--navtextcolorBGhover: wheat;
 	--navlinktextsize: 15px;
 	--navbarheight:12vh;
 	--navlogotextsize: 15px;
@@ -33,9 +33,9 @@ nav {
 }
 #homelink{
 	text-decoration: none;
-	color: grey;
+	color: var(--navtextcolor);
 	padding: 5px;
-	border: .2rem solid grey;
+	border: .2rem solid var(--navtextcolor);
 	border-radius: 2px;
 }
 .links{
@@ -159,7 +159,7 @@ nav {
 		transition: transform 0.5s ease-in; 
 	}
 	.links li{
-		opacity: .4;
+		opacity: .9;
 		border: 1px; 
 		
 
