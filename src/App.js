@@ -4,7 +4,7 @@ import Display from './displaygrid';
 import './App.css';
 import { Provider } from './componets.js/context.js';
 import Details from './componets.js/details';
-import Up from './componets.js/UP_UP'
+
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
   
 

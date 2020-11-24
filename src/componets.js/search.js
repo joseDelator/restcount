@@ -11,8 +11,9 @@ class Search extends Component{
         };
     
     findcountry = (dispatch, e) =>{
-        this.setState( { [e.target.name]: e.target.value});
+       // this.setState( { [e.target.name]: e.target.value});
         e.preventDefault(); 
+        /* 
         if(this.state.countryname ===''){
             axios
         .get('https://restcountries.eu/rest/v2/all?fields=name;flag;region')        
@@ -28,7 +29,7 @@ class Search extends Component{
             err => console.log(err)
         )
             
-        }else{
+        }else{*/
         axios
         .get("https://restcountries.eu/rest/v2/name/"+this.state.countryname+'?fields=name;flag;region')        
         .then( res =>{
@@ -42,7 +43,7 @@ class Search extends Component{
         .catch(
             err => console.log(err)
         )
-        }
+    //    }
     };
     
     render(){
