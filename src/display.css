@@ -75,11 +75,10 @@
 	bottom: 0;
 	
 }
-.link svg{
-	width: 10%;
-	height: 100%;
-	transition: 1s ease-in;
-	fill: wheat;
+
+.link {
+	text-decoration: none;
+	color: black;
 }
 .link:hover svg{
 	transform: rotate(360deg);
@@ -114,7 +113,7 @@
 	transform: rotate(180deg);
 }
 .search-area{
-	color: wheat;
+	
 	 padding-top: 12vh;
 	padding-bottom: 12px;
 	
@@ -124,16 +123,17 @@ input{
 
 	background-color: transparent;
 	border: transparent;
-	border-bottom: 3px solid wheat;
-	color: wheat;
+	border-bottom: 3px solid black;
+	
 
 }
 input:focus{
-	border: 3px solid wheat;
+	outline: none !important;
+	border: 3px solid  black;
 
 }
 ::placeholder{
-	color: wheat;
+	color: black;
 }
 @media(max-width:800px){
 	input{

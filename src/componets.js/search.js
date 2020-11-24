@@ -13,7 +13,7 @@ class Search extends Component{
     findcountry = (dispatch, e) =>{
         this.setState( { [e.target.name]: e.target.value});
         e.preventDefault(); 
-        if(this.state.countryname == ''){
+        if(this.state.countryname ===''){
             axios
         .get('https://restcountries.eu/rest/v2/all?fields=name;flag;region')        
         .then( res =>{
@@ -58,7 +58,7 @@ class Search extends Component{
                                 placeholder ="countires"
                                 name ="countryname"
                                 value = {this.state.countryname} 
-                                onChange = {this.findcountry.bind(this, dispatch)}
+                                onChange = {this.onChange}
                                 />
                                 
                            </form>

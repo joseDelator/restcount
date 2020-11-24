@@ -19,11 +19,12 @@ class App extends Component{
               
               <Switch>
                 <Route exact path="/" component={Display} />
+                
                 <Route  exact path="/details/country/:id" component={Details}/>
                 
               </Switch>
             </React.Fragment>
-            <Up/>
+            
           </Router>
          
         </div>

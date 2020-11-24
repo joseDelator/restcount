@@ -6,10 +6,10 @@
     margin: 0; 
     box-sizing: border-box;
     text-align: center;
-    font-family: 'Playfair Display', Tahoma, Geneva, Verdana;
+    font-family: 'Oswald', Tahoma, Geneva, Verdana;
 	
 	text-transform: capitalize;
-	color: white;
+	color: black;
 }
 .up_up{
 	opacity: 1;
