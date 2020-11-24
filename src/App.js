@@ -23,8 +23,9 @@ class App extends Component{
                 
               </Switch>
             </React.Fragment>
+            <Up/>
           </Router>
-          <Up/>
+         
         </div>
       </Provider>
     );

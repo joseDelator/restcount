@@ -7,8 +7,8 @@
     box-sizing: border-box;
     text-align: center;
     font-family: 'Playfair Display', Tahoma, Geneva, Verdana;
-	background-image: url(night.jpg) ;
-	
+	background-color:#151531 ;
+	text-transform: capitalize;
 	color: white;
 }
 .up_up{
