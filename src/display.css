@@ -120,7 +120,10 @@
 }
 input{
 	padding-top: 5px;
-
+		width: 50%;
+		height: 30px;
+		font-size: 100%;
+	
 	background-color: transparent;
 	border: transparent;
 	border-bottom: 3px solid black;
@@ -137,7 +140,7 @@ input:focus{
 }
 @media(max-width:800px){
 	input{
-		width: 95%;
+		width: 50%;
 		height: 30px;
 		font-size: 100%;
 	}
