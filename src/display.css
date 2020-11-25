@@ -34,6 +34,7 @@
 	background: inherit;
 	position: relative;
 	text-align: center;
+	box-shadow:  0px  1px 2px   #888888 ;
 }
 .cards h2{
 	font-size: 120%;
@@ -60,6 +61,7 @@
  z-index: -25;
 }
 .cards img{
+	margin-top: 15px;
 	height: 150px;
 	width: 285px;
 }
@@ -73,11 +75,9 @@
 	bottom: 0;
 	
 }
-.link svg{
-	width: 10%;
-	height: 100%;
-	transition: 1s ease-in;
-	fill: wheat;
+.link {
+	text-decoration: none;
+	color: black;
 }
 .link:hover svg{
 	transform: rotate(360deg);
@@ -119,23 +119,25 @@
 }
 input{
 	padding-top: 5px;
-
+	width: 65%;
+	height: 30px;
+	font-size: 100%;
 	background-color: transparent;
 	border: transparent;
-	border-bottom: 3px solid wheat;
-	color: wheat;
+	border-bottom: 3px solid black;
+	
 
 }
 input:focus{
-	border: 3px solid wheat;
+	border: 3px solid black;
 
 }
 ::placeholder{
-	color: wheat;
+	color: black;
 }
 @media(max-width:800px){
 	input{
-		width: 95%;
+		width: 65%;
 		height: 30px;
 		font-size: 100%;
 	}
