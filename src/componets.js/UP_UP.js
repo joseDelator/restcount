@@ -25,7 +25,7 @@ componentWillUnmount(){
 
  render(){ 
      return(
-    <a href='google.com' className={ this.state.scrolled ? "up_up":"top"}>
+    <a href='#' className={ this.state.scrolled ? "up_up":"top"}>
             <Svgfile />
         </a>
      )   
