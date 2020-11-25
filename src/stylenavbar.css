@@ -161,7 +161,7 @@ nav {
 		height: 88vh;
 		top: var(--navbarheight);
 		background: var(--navcolor) ; 
-		display: flex;
+		display: none;
 		flex-direction: column;
 		align-items: center;
 		width: 100%; 
@@ -184,6 +184,7 @@ nav {
 
 .nav-active{
 		transform: translateX(0%);
+		display: flex;
 	}
 
 	 .toggle .line1{

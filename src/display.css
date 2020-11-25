@@ -112,8 +112,8 @@
 	transform: rotate(180deg);
 }
 .search-area{
-	color: wheat;
-	 
+	
+	padding-top: 12vh;
 	padding-bottom: 12px;
 	
 }
