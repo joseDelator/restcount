@@ -48,7 +48,7 @@ nav {
 	display: flex; 
 	justify-content: space-around;
 	width: var(--navlinkwidthpercentage);
-	 
+
 }
 
 .links li{
@@ -97,6 +97,7 @@ nav {
 		font-size: 12px; 
 	}
 	.links{
+		background-color: white;
 		position: absolute;
 		right: 0px;
 		height: 89vh;
@@ -105,6 +106,7 @@ nav {
 		flex-direction: column;
 		align-items: center;
 		width: 50%; 
+		color: white;
 		display: none;
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in; 
@@ -153,6 +155,7 @@ nav {
 		font-size: 12px; 
 	}
 	.links{
+		
 		position: absolute;
 		right: 0px;
 		height: 88vh;
@@ -161,7 +164,7 @@ nav {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 50%; 
+		width: 100%; 
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in; 
 	}

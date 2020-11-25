@@ -34,7 +34,6 @@
 	background: inherit;
 	position: relative;
 	text-align: center;
-	box-shadow:  0px  2.5px 5px   #888888 ;
 }
 .cards h2{
 	font-size: 120%;
@@ -49,19 +48,18 @@
 }
 .cards::after{
 	content: '';
- width: 350px;
- height: 450px;
+ width: 550px;
+ height: 950px;
  background: inherit; 
  position: absolute;
  left: -25px; 
  top: -25px; 
  bottom: 0;
- box-shadow: inset 0 0 0 600px rgba(255, 255, 255);
- filter: blur(290000px);
+ box-shadow: inset 0 0 0 300px rgba(255, 255, 255,.4);
+ filter: blur(10px);
  z-index: -25;
 }
 .cards img{
-	padding-top: 10px;
 	height: 150px;
 	width: 285px;
 }
@@ -75,10 +73,11 @@
 	bottom: 0;
 	
 }
-
-.link {
-	text-decoration: none;
-	color: black;
+.link svg{
+	width: 10%;
+	height: 100%;
+	transition: 1s ease-in;
+	fill: wheat;
 }
 .link:hover svg{
 	transform: rotate(360deg);
@@ -113,34 +112,30 @@
 	transform: rotate(180deg);
 }
 .search-area{
-	
-	 padding-top: 12vh;
+	color: wheat;
+	 
 	padding-bottom: 12px;
 	
 }
 input{
 	padding-top: 5px;
-		width: 50%;
-		height: 30px;
-		font-size: 100%;
-	
+
 	background-color: transparent;
 	border: transparent;
-	border-bottom: 3px solid black;
-	
+	border-bottom: 3px solid wheat;
+	color: wheat;
 
 }
 input:focus{
-	outline: none !important;
-	border: 3px solid  black;
+	border: 3px solid wheat;
 
 }
 ::placeholder{
-	color: black;
+	color: wheat;
 }
 @media(max-width:800px){
 	input{
-		width: 50%;
+		width: 95%;
 		height: 30px;
 		font-size: 100%;
 	}

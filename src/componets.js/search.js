@@ -3,17 +3,20 @@ import axios from 'axios';
 import {ProductConsumer} from '../componets.js/context';
 class Search extends Component{
     state = {
-        countryname: ''
+        countryname: '',
+        prev_length: 0 
     };
     onChange = (e) => {
         this.setState( { [e.target.name]: e.target.value});
+
+        console.log(this.state.countryname)
     };
     findcountry = (dispatch, e) =>{
-
+        
         this.setState( { [e.target.name]: e.target.value});
-        e.preventDefault(); 
-         
-        if(this.state.countryname ===''){
+        this.setState({prev_length:this.state.countryname.length})
+        console.log(this.state.prev_length)
+        if(this.state.prev_length=== 2 && this.state.countryname.length === 1 ){
             axios
         .get('https://restcountries.eu/rest/v2/all?fields=name;flag;region')        
         .then( res =>{
@@ -44,8 +47,9 @@ class Search extends Component{
         )
        }
     };
-
+    
     render(){
+       
         return(
            <ProductConsumer>
                {value =>{
