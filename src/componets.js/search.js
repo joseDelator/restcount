@@ -6,17 +6,22 @@ class Search extends Component{
         countryname: '',
         prev_length: 0 
     };
-    onChange = (e) => {
-        this.setState( { [e.target.name]: e.target.value});
-
-        console.log(this.state.countryname)
-    };
-    findcountry = (dispatch, e) =>{
+     onChange = (e) => {
+        this.setState( { countryname: e.target.value});
+        this.some(e.target.value)
         
+        console.log(e.target.value)
+        
+    };
+    some(vlaue){
+        this.setState({countryname: vlaue})
+    }
+    findcountry = (dispatch, e) =>{
+        var value = e.target.value;
         this.setState( { [e.target.name]: e.target.value});
-        this.setState({prev_length:this.state.countryname.length})
-        console.log(this.state.prev_length)
-        if(this.state.prev_length=== 2 && this.state.countryname.length === 1 ){
+        
+       
+        if(value ==="" ){
             axios
         .get('https://restcountries.eu/rest/v2/all?fields=name;flag;region')        
         .then( res =>{
@@ -32,8 +37,9 @@ class Search extends Component{
         )
             
         }else{
+
         axios
-        .get("https://restcountries.eu/rest/v2/name/"+this.state.countryname+'?fields=name;flag;region')        
+        .get("https://restcountries.eu/rest/v2/name/"+value+'?fields=name;flag;region')        
         .then( res =>{
             dispatch({
                 type: 'Search_Country',
@@ -61,8 +67,11 @@ class Search extends Component{
                                <input type="text" 
                                 placeholder ="countires"
                                 name ="countryname"
-                                value = {this.state.countryname} 
+                                value = {this.state.countryname}
+                               onChange={ this.onChange} 
                                 onChange = {this.findcountry.bind(this, dispatch)}
+                                
+                                
                                 />
                                 
                            </form>
