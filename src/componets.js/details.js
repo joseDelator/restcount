@@ -32,13 +32,14 @@ class Details extends Component {
 
     render(){
         const {player, bloc, lang, tran, curn}= this.state;
-        console.log(player)
+       // console.log(player)
         return(
             <React.Fragment>
                 <div className="details">
                     <div className="info" >
                         <h1>{player.name}</h1>
                         <h4>{player.nativeName}</h4>
+                        <h5>Capital: {player.capital}</h5>
                         <img  className={player.name !== 'Nepal' ? "flag" : "nepal" } alt="Country Flag" src={player.flag}></img>
                     </div>
                     <div className="info">

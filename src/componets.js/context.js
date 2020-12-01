@@ -27,7 +27,9 @@ class Provider extends Component{
         
             this.setState({player: res.data});
             })
-        .catch(err => console.log(err))
+        .catch(err => {console.log(err)
+        }
+            )
     
 
 }

@@ -23,7 +23,7 @@ class Nava extends Component{
         
         <li><a href="https://github.com/joseDelator?tab=repositories">Projects</a></li>
         <li><a href="https://www.linkedin.com/in/jose-de-la-torre-b58126161">About</a></li>
-        <li><Link to="/edds"onClick = {() => this.setState({active: true})} >Nowwhere</Link></li>
+        <li><Link to="/edds"onClick = {() => this.setState({active: true})} >Nowhere</Link></li>
     </ul>
     <div className="burger" onClick = {() => this.setState({active: !this.state.active})}>
         <div className={this.state.active ? "line1" : " toggle1 line1 " }></div>

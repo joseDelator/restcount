@@ -117,6 +117,9 @@
 	padding-bottom: 12px;
 	
 }
+.search-area h5{
+	color: red;
+}
 input{
 	padding-top: 5px;
 	width: 65%;
