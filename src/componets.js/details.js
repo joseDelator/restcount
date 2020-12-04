@@ -10,8 +10,11 @@ class Details extends Component {
         tran: {},
         curn: [], 
         active: false,
+        population:'',
+        acres: ''
         
     };
+    
 
     componentDidMount(){
         
@@ -23,15 +26,21 @@ class Details extends Component {
             this.setState({bloc: res.data[0].regionalBlocs});
             this.setState({lang: res.data[0].languages});
             this.setState({tran:res.data[0].translations});
-            this.setState({curn: res.data[0].currencies})
+            this.setState({curn: res.data[0].currencies});
+            this.setState({population:res.data[0].population.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')});
+            this.setState({acres:res.data[0].area.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')})
             })
         .catch(err => console.log(err))
     
 
 }
 
+
     render(){
-        const {player, bloc, lang, tran, curn}= this.state;
+        const {player, bloc, lang, tran, curn, population, acres}= this.state;
+      
+          
+        
        // console.log(player)
         return(
             <React.Fragment>
@@ -44,8 +53,8 @@ class Details extends Component {
                     </div>
                     <div className="info">
                         <h2>Size</h2>
-                            <h4>{player.population} People</h4>
-                            <h4>{player.area} Acres</h4>
+                            <h4>{population} People</h4>
+                            <h4>{acres} Acres</h4>
                             
                     </div>
                     <div className="info">

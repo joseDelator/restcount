@@ -7,7 +7,9 @@ class Search extends Component{
         NOcountry: false
          
     };
-    
+    onSubmit1= e =>{
+        e.preventDefault();
+    }
     findcountry = (dispatch, e) =>{
         e.preventDefault();
         var value = e.target.value;
@@ -55,7 +57,7 @@ class Search extends Component{
     
     render(){
 
-      const Notfoundres = ()=>{
+      const NotfoundRes = ()=>{
           if(this.state.NOcountry === true)
       return <h5 className="not for message">{this.state.countryname} not found!!!!!</h5>
        };
@@ -66,7 +68,7 @@ class Search extends Component{
                    return(
                        <div className="search-area">
                            <h1>Search a country</h1>
-                           <form onSubmit={this.findcountry.bind(this, dispatch)}>
+                           <form onSubmit={this.onSubmit1}>
                                <input type="text" 
                                 placeholder ="Search"
                                 name ="countryname"
@@ -78,7 +80,7 @@ class Search extends Component{
                                 />
                                 
                            </form>
-                           {Notfoundres()}
+                           {NotfoundRes()}
                        </div>
                    )
                }}
