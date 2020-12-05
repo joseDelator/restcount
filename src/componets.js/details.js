@@ -18,7 +18,7 @@ class Details extends Component {
 
     componentDidMount(){
         
-        axios.get('https://restcountries.eu/rest/v2/name/'+ this.props.match.params.id)
+        axios.get('https://restcountries.eu/rest/v2/name/'+ this.props.match.params.id+"?fullText=true")
 
         .then(res => {
             
