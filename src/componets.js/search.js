@@ -69,7 +69,7 @@ class Search extends Component{
                        <div className="search-area">
                            <h1>Search a country</h1>
                            <form onSubmit={this.onSubmit1}>
-                               <input type="text" 
+                               <input type="search" 
                                 placeholder ="Search"
                                 name ="countryname"
                                 value = {this.state.countryname}
