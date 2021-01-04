@@ -16,8 +16,8 @@
     animation:spin 2s infinite linear;
     border:solid 2vmin transparent;
     border-radius:50%;
-    border-right-color:#3cf;
-    border-top-color:#3cf;
+    border-right-color:slategrey;
+    border-top-color:slategrey;
     box-sizing:border-box;
     content:"";
     height:16vmin;
@@ -30,8 +30,8 @@
     animation:spin 3s infinite linear;
     border:solid 2vmin transparent;
     border-radius:50%;
-    border-right-color:silver;
-    border-top-color:#6ff;
+    border-right-color:#CDCDCD;
+    border-top-color: #CDCDCD;
     box-sizing:border-box;
     content:"";
     height:12vmin;
