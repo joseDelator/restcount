@@ -15,7 +15,8 @@ class Stats extends Component{
              {value=>{
                  const {player}= value;
                  console.log(value);
-                 if(player.lenght ===0 || player === undefined){
+                
+                 if( player.length === 0 ){
                      return <Spiner/>;
                  }
                  else{
