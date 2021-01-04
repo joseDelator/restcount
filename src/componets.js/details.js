@@ -1,8 +1,10 @@
 import React, { Component} from 'react'
 import '../details.css'
 import axios from 'axios'
+import Spiner from '../spiner'
+import { Link, Redirect, useHistory} from 'react-router-dom';
 
-class Details extends Component {
+class Details extends Component  {
     state = {
         player:[],
         bloc: [], 
@@ -11,11 +13,12 @@ class Details extends Component {
         curn: [], 
         active: false,
         population:'',
-        acres: ''
+        acres: '',
+        errer: false,
         
     };
     
-
+      
     componentDidMount(){
         
         axios.get('https://restcountries.eu/rest/v2/name/'+ this.props.match.params.id+"?fullText=true")
@@ -29,8 +32,13 @@ class Details extends Component {
             this.setState({curn: res.data[0].currencies});
             this.setState({population:res.data[0].population.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')});
             this.setState({acres:res.data[0].area.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')})
-            })
-        .catch(err => console.log(err))
+            
+        })
+        .catch(err => { 
+            console.log(err)
+            this.props.history.replace('/error')
+          
+        })
     
 
 }
@@ -39,11 +47,16 @@ class Details extends Component {
     render(){
         const {player, bloc, lang, tran, curn, population, acres}= this.state;
       
+       if(player.length === 0){
+            
+           return <Spiner/>
+           ;
           
-        
-       // console.log(player)
+       }else{
         return(
+            
             <React.Fragment>
+                
                 <div className="details">
                     <div className="info" >
                         <h1>{player.name}</h1>
@@ -97,7 +110,7 @@ class Details extends Component {
                 </div>
             </React.Fragment> 
         )
-            
+                           }
         
     }
 }

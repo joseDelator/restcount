@@ -6,10 +6,13 @@ import Search from './componets.js/search'
 import Up from './componets.js/UP_UP'
 class Display extends Component{
     
-    render() { return(
+    render(){ 
+        
+         return(
         <div>
             <Search />
             <div id="containerbig">
+
                 <Stats />
             </div>
             <Up />
