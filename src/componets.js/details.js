@@ -30,8 +30,13 @@ class Details extends Component  {
             this.setState({lang: res.data[0].languages});
             this.setState({tran:res.data[0].translations});
             this.setState({curn: res.data[0].currencies});
+            if(res.data[0].population !== null){
             this.setState({population:res.data[0].population.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')});
+            }
+            
+            if(res.data[0].area !== null  ){
             this.setState({acres:res.data[0].area.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')})
+            }
             
         })
         .catch(err => { 
