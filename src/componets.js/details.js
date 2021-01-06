@@ -32,11 +32,15 @@ class Details extends Component  {
             this.setState({curn: res.data[0].currencies});
             if(res.data[0].population !== null){
             this.setState({population:res.data[0].population.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')});
+            }else{
+              this.setState({population: "N/A"})  
             }
             
             if(res.data[0].area !== null  ){
             this.setState({acres:res.data[0].area.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')})
-            }
+            }else{
+                this.setState({acres: "N/A"})  
+              }
             
         })
         .catch(err => { 
