@@ -9,7 +9,7 @@ class Stats extends Component{
          <ProductConsumer>
              {value=>{
                  const {player}= value;
-                 console.log(value);
+                 
                  return (
 
                      <React.Fragment>
