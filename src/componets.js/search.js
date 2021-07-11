@@ -58,9 +58,15 @@ class Search extends Component{
     render(){
 
       const NotfoundRes = ()=>{
-          if(this.state.NOcountry === true)
-      return <h5 className="not for message">{this.state.countryname} not found!!!!!</h5>
-       };
+          if(this.state.NOcountry === true){
+              if(this.state.countryname.length<12){
+            return <h5 className="not for message">{this.state.countryname} not found!!!!!</h5>
+              }
+            else{
+                return <h5 className="not for message">{this.state.countryname.substring(10,0)}... not found!!!!!</h5>
+            }
+          }
+         };
         return(
            <ProductConsumer>
                {value =>{

@@ -12,7 +12,7 @@ class Nava extends Component{
     <div>
     <nav>
     <div className="logo">
-        <h2>Fabi Countires</h2>
+        <h2>Fabi Countries</h2>
     </div>
     <div className="homebutton">
         <Link to="/" id="homelink">Home</Link>
