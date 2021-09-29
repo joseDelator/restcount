@@ -35,20 +35,27 @@ class Search extends Component{
         }else{
 
         axios
-        .get("https://restcountries.eu/rest/v2/name/"+value+'?fields=name;flag;region')        
+        .get("https://restcountries.com/v2/name/"+value)        
         .then( res =>{
             this.setState({NOcountry: false})
-            dispatch({
-                type: 'Search_Country',
-                payload: res.data
-            });
+             console.log(res.data)
+            if ( res.data.status != '404'){
+                dispatch({
+                    type: 'Search_Country',
+                    payload: res.data
+                });
+            }
+            else{
+                this.setState({NOcountry: true})
+            }
+      
         }
     
         )
         .catch(
             err => {
             console.log(err)
-            this.setState({NOcountry: true})
+           
            
          } )
        }
