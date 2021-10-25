@@ -24,7 +24,6 @@ class Details extends Component  {
         axios.get('https://restcountries.com/v2/name/'+ this.props.match.params.id+"?fullText=true")
 
         .then(res => {
-            
             this.setState({player: res.data[0]});
             this.setState({bloc: res.data[0].regionalBlocs});
             this.setState({lang: res.data[0].languages});
@@ -41,7 +40,11 @@ class Details extends Component  {
             }else{
                 this.setState({acres: "N/A"})  
               }
-            
+              if(res.data[0].curn !== null  ){
+                this.setState({acres:res.data[0].area.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')})
+                }else{
+                    this.setState({curn: "N/A"})  
+                  }
         })
         .catch(err => { 
             console.log(err)
@@ -95,11 +98,7 @@ class Details extends Component  {
                     <h2>Region</h2>
                         <h4>{ player.region}</h4>
                         <h4>{player.subregion}</h4>
-                        <h4>{player.timezones}</h4>
-                            <h4>CallingCode: {player.callingCodes}</h4>
-                        {bloc.map(item =>(
-                            <h4 key = {item.name}>{item.name}</h4>
-                        ))}
+                       
                     </div>
                     <div className="info">
                         <h2>Currencies</h2>
